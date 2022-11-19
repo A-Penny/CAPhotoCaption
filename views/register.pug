@@ -2,12 +2,19 @@ extends index
 
    
 block content
-    h2 Please provide an email and a password 
-    form(action="/register" method="POST")
-    label Email  
-        input(type="text" name="username" placeholder="example@email.com")
+    h1=errorMessage
+    h2 Please create some login credentials 
+    form(id="emailForm" action="/users/register" method="POST")
+        label First Name 
+        input(id="first_name" type="text" name="first_name" placeholder="first name")
+        br
+        label Last Name 
+        input(id="last_name" type="text" name="last_name" placeholder="last name")
+        br
+        label Email  
+        input(id="email" type="text" name="email" placeholder="example@email.com" value="")
         br 
-    label Password  
-        input(type="password" name="password" placeholder="password")
-    br
-    input(value='Submit', type='submit')
+        label Password  
+        input(id="password" type="password" name="password" placeholder="password" value="")
+        br
+        input(value='Submit', type='submit')

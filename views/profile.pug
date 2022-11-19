@@ -1,0 +1,35 @@
+html 
+    head   
+        welcome
+    body
+
+        h1=message 
+        block content 
+            h1='Welcome, ' + user.dataValues.first_name
+            h2='This is your chance to add a caption to several photos for a chance to win!!!'
+            img(src='images/baby.jpg' alt="Baby photo") 
+            h3=caption1
+            form(action="/profile/pic1" method="POST")
+                label Enter or update caption
+                input(type="text" name="caption1" placeholder="caption the above photo")
+                input(value='Submit', type='submit')
+            img(src='images/Chipper.jpg' alt="Chipper photo")
+            h3=caption2
+            form(action="/profile/pic2" method="POST")
+                label Enter or update caption
+                input(type="text" name="caption2" placeholder="caption the above photo")
+                input(value='Submit', type='submit')
+            img(src='images/Doc.jpg' alt="Doc sleeping photo")
+            h3=caption3
+            form(action="/profile/pic3" method="POST")
+                label Enter or update caption
+                input(type="text" name="caption3" placeholder="caption the above photo")
+                input(value='Submit', type='submit')
+            img(src='images/JM.jpg' alt='JM photo')
+            h4=caption4
+            form(action="/profile/pic4" method="POST")
+                label Enter or update caption
+                input(type="text" name="caption4" placeholder="caption the above photo")
+                input(value='Submit', type='submit')
+        form(action="/logout?_method=DELETE" method="POST")
+            input(type="submit" value="Log Out" )

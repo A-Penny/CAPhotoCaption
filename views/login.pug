@@ -1,13 +1,15 @@
-extends index
+extends Index
 
    
 block content
+    h1=errorMessage 
+    
     h2 Please login 
     form(action="/login" method="POST")
-    label Email  
-        input(type="text" name="username" placeholder="example@email.com")
+        label Email  
+        input(type="text" name="email" placeholder="example@email.com")
         br 
-    label Password  
+        label Password  
         input(type="password" name="password" placeholder="password")
-    br
-    input(value='Submit', type='submit')
+        br
+        input(value='Submit', type='submit')
